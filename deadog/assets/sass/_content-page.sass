@@ -1,0 +1,156 @@
+// VARIABLES
+// DESKTOP
+$d-content-h1: 38
+$d-content-h2: 34
+$d-content-h2: 30
+$d-content-h3: 26
+$d-content-h4: 22
+$d-content-h5: 18
+$d-content-h6: 16
+
+$d-content-p: 16
+
+// MOBILE
+$m-content-h1: 36
+$m-content-h2: 32
+$m-content-h2: 28
+$m-content-h3: 24
+$m-content-h4: 20
+$m-content-h5: 16
+$m-content-h6: 15
+
+$m-content-p: 12
+.content-page
+    & > *
+        line-height: 1.7
+        font-weight: 300
+
+.content-page
+    h1,h2,h3,h4,h5,h6
+        color: $black
+        font-family: $inter
+        margin-bottom: 20px
+        font-weight: bold
+
+    h1
+        @include responsive-font($d-content-h1, $m-content-h1)
+    h2
+        @include responsive-font($d-content-h2, $m-content-h2)
+    h3
+        @include responsive-font($d-content-h3, $m-content-h3)
+    h4
+        @include responsive-font($d-content-h4, $m-content-h4)
+    h5
+        @include responsive-font($d-content-h5, $m-content-h5)
+    h6
+        @include responsive-font($d-content-h6, $m-content-h6)
+    p
+        color: $gray
+        font-family: $inter
+
+        @include responsive-font($d-content-p, $m-content-p)
+
+    strong
+        font-weight: bold
+    em
+        font-style: italic
+
+    ul,ol
+        list-style-position: inside
+        padding-inline-start: 40px
+        color: $gray
+        font-family: $inter
+
+        li
+            margin-bottom: 5px
+            padding-left: 5px
+    ol
+        list-style: decimal
+        li::marker
+            color: $white
+            font-weight: bold
+    ul
+        list-style: disc
+        li::marker
+            content: "—"
+            color: $white
+    a
+        color: $gray
+        border-bottom: 1px solid $red
+    pre
+        color: $gray
+
+.gutenberg,
+.description__body
+    font-family: $inter
+
+.description__body h1,
+.description__body h2,
+.description__body h3,
+.description__body h4,
+.description__body h5,
+.description__body h6
+    color: $white
+    line-height: 2.15
+
+.description__body p
+    line-height: 2.15
+
+.description__body .wp-block-image
+    height: 100%
+
+.description__body figure img
+    height: 100%
+    object-fit: cover
+
+.description__body iframe
+    width: 100%
+
+.description__body .wp-block-embed-youtube iframe
+    min-height: 400px
+
+.description__body
+    ul,ol
+        list-style-position: inside
+        padding-inline-start: 40px
+        color: $gray
+        font-family: $inter
+
+        li
+            padding-left: 5px
+            margin-bottom: 5px
+    ol
+        list-style: decimal
+        li::marker
+            color: $white
+            font-weight: bold
+    ul
+        list-style: disc
+        li::marker
+            content: "—"
+            color: $white
+
+.wp-block-columns
+    display: flex
+    margin: 20px 0
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+.wp-block-column
+    flex: 1
+    margin: 0 20px
+
+@media (max-width: 764px)
+    .wp-block-columns.has-3-columns
+        flex-flow: row wrap
+
+    .has-3-columns .wp-block-column:first-child
+        flex-basis: 100%
+
+@media (max-width: 478px)
+    .wp-block-columns.has-3-columns
+        display: block
+
+    .wp-block-column
+        margin: 20px 0

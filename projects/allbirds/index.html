@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+<script defer="defer" src="./js/vendors-node_modules_gsap_ScrollTrigger_js-node_modules_gsap_index_js-node_modules_html-loade-d93230.js"></script><script defer="defer" src="./js/main.js"></script><link href="./css/vendors-node_modules_gsap_ScrollTrigger_js-node_modules_gsap_index_js-node_modules_html-loade-d93230.css" rel="stylesheet"><link href="./css/main.css" rel="stylesheet"></head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__menu">
+            <a class="header__link display-4" href="#">man</a>
+            <a class="header__link display-4" href="#">wooman</a>
+        </div>
+        <a class="header__logo" href="#">
+            <img class="header__logo-img" src="./img/logo.svg" alt="logo">
+        </a>
+        <nav class="header__inner">
+            <div class="header__menu">
+                <a class="header__link display-4" href="#">our material</a>
+                <a class="header__link display-4" href="#">stories</a>
+            </div>
+            <div class="header__icons">
+                <a class="header__icon" href="#">
+                    <img class="header__icon-img" src="./img/profile.svg" alt="logo">
+                </a>
+                <a class="header__icon" href="#">
+                    <img class="header__icon-img" src="./img/quest.svg" alt="logo">
+                </a>
+                <a id="cart" class="header__icon icon-counter" href="#">
+                    <img class="header__icon-img" src="./img/buy.svg" alt="logo">
+                    <span class="icon-counter__counter display-4">0</span>
+                </a>
+            </div>
+        </nav>
+        <div class="header__scroll"></div>
+    </header>
+    <!-- HEADER-MOBILE -->
+    <div class="header-mobile">
+        <a class="header-mobile__logo" href="#">
+            <img class="header-mobile__logo-img" src="./img/logo.svg" alt="logo">
+        </a>
+
+        <div class="header-mobile__icons">
+            <a class="header-mobile__icon" href="#">
+                <img class="header__icon-img" src="./img/profile.svg" alt="logo">
+            </a>
+            <a class="header-mobile__icon" href="#">
+                <img class="header__icon-img" src="./img/quest.svg" alt="logo">
+            </a>
+            <a class="header-mobile__icon icon-counter" href="#">
+                <img class="header__icon-img" src="./img/buy.svg" alt="logo">
+                <span class="icon-counter__counter display-4">0</span>
+            </a>
+            <div id="burger" class="burger">
+                <span class="burger__span"></span>
+                <span class="burger__span"></span>
+            </div>
+        </div>
+
+        <nav class="header-mobile__nav">
+            <ul class="header-mobile__list">
+                <li class="header-mobile__item">
+                    <a class="header-mobile__link" href="#">MAN</a>
+                </li>
+                <li class="header-mobile__item">
+                    <a class="header-mobile__link" href="#">WOOMAN</a>
+                </li>
+                <li class="header-mobile__item">
+                    <a class="header-mobile__link" href="#">our material</a>
+                </li>
+                <li class="header-mobile__item">
+                    <a class="header-mobile__link" href="#">stories</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- MAIN-SCREEN -->
+    <section class="main-screen m-bottom">
+        <div class="container">
+            <h1 class="main-screen__title h1">Running Shoes Made From Trees</h1>
+            <p class="main-screen__subtitle display-2">New colors to keep you moving</p>
+            <div class="main-screen__buttons buttons-wrap">
+                <a class="buttons-wrap__btn btn-light" href="#">SHOP MAN</a>
+                <a class="buttons-wrap__btn btn-light" href="#">SHOP WOMAN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION-MODULE -->
+    <section class="section-module scroll-trigger">
+        <div class="container">
+            <h2 class="section-module__title h2 text-center">Our Favorites</h2>
+            <!-- TABS -->
+            <div class="tabs">
+                <div class="tabs__tabs">
+                    <button class="tabs__tab btn-light section-tabs__tab_active" data-tab="#shoes">shoes</button>
+                    <button class="tabs__tab btn-light" data-tab="#apparel">apparel</button>
+                    <button class="tabs__tab btn-light" data-tab="#basics">basics</button>
+                </div>
+                <div class="tabs__body m-bottom">
+                    <!-- SHOES -->
+                    <div id="shoes" class="tabs__content tabs__content_active">
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-1.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Tree Dasher</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-1.svg">
+                                    <span class="post__span display-3">Daily Running Shoe</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-2.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Tree Runner</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-1.svg">
+                                    <span class="post__span display-3">Light and Breezy Sneaker</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-3.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Wool Runner</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-2.svg">
+                                    <span class="post__span display-3">Cozy Sneaker</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- APPAREL -->
+                    <div id="apparel" class="tabs__content">
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-2.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Tree Runner</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-2.svg">
+                                    <span class="post__span display-3">Light and Breezy Sneaker</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-3.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Wool Runner</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-2.svg">
+                                    <span class="post__span display-3">Cozy Sneaker</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-1.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Tree Dasher</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-1.svg">
+                                    <span class="post__span display-3">Daily Running Shoe</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- BASICS -->
+                    <div id="basics" class="tabs__content">
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-2.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Tree Runner</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-2.svg">
+                                    <span class="post__span display-3">Light and Breezy Sneaker</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-1.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Tree Dasher</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-2.svg">
+                                    <span class="post__span display-3">Daily Running Shoe</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- ARTICLE -->
+                        <article class="post">
+                            <div class="post__inner">
+                                <img class="post__img img-cover" src="./img/article-3.png" alt="Кроссовки">
+                                <a class="post__btn btn-light" href="#">shop man</a>
+                                <a class="post__btn btn-light" href="#">shop woman</a>
+                            </div>
+                            <div class="post__info">
+                                <strong class="post__name">Wool Runner</strong>
+                                <div class="post__description">
+                                    <img class="post__icon" src="./img/article-icon-1.svg">
+                                    <span class="post__span display-3">Cozy Sneaker</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION-INFO -->
+    <section class="section-info scroll-trigger">
+        <img class="section-info__mediafile" src="./img/section-info-1.png" alt="Зелёные кроссовки">
+        <div class="container">
+            <div class="section-info__body m-bottom">
+                <h2 class="section-info__title h2">Colorful By Nature</h2>
+                <p class="section-info__subtitle display-4">Merino Wool Shoes In Limited Edition Hues</p>
+                <div class="section-info__buttons buttons-wrap">
+                    <a class="buttons-wrap__btn btn-dark" href="#">shop man</a>
+                    <a class="buttons-wrap__btn btn-dark" href="#">shop woman</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION-SLIDER -->
+    <section class="section-slider scroll-trigger">
+        <h2 class="section-slider__title h2">Shop By Category</h2>
+        <div class="section-slider__slider swiper-container m-bottom">
+            <div class="section-slider__wrapper swiper-wrapper">
+                <!-- POST -->
+                <a href="#" class="post swiper-slide" data-swiper-autoplay="2000">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/slider-1.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-border">Men's Shoes</strong>
+                    </div>
+                </a>
+                <!-- POST -->
+                <a href="#" class="post swiper-slide" data-swiper-autoplay="2000">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/slider-2.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-border">Women's Shoes</strong>
+                    </div>
+                </a>
+                <!-- POST -->
+                <a href="#" class="post swiper-slide" data-swiper-autoplay="2000">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/slider-3.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-border">Men's Apparel</strong>
+                    </div>
+                </a>
+                <!-- POST -->
+                <a href="#" class="post swiper-slide" data-swiper-autoplay="2000">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/slider-4.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-border">Women's Apparel</strong>
+                    </div>
+                </a>
+            </div>
+            <!-- <div class='section-slider__navigation'>
+                <div class="swiper-button-next">
+                    <img src="img/icons/arrow-right.svg" alt="">
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="img/icons/arrow-right.svg" alt="">
+                </div>
+            </div> -->
+        </div>
+    </section>
+    
+    <!-- SECTION-INFO -->
+    <section class="section-info scroll-trigger">
+        <img class="section-info__mediafile" src="./img/section-info-2.png" alt="Зелёные кроссовки">
+        <div class="container">
+            <div class="section-info__body m-bottom">
+                <h2 class="section-info__title h2">Made From Nature, For Nature</h2>
+                <p class="section-info__subtitle display-4">We craft with planet-friendly natural materials, like merino wool and eucalyptus trees,<br> because they're our best chance for a sustainable future.</p>
+                <a class="section-info__btn btn-dark section-info__btn_wide" href="#">See How</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION-SLIDER -->
+    <section class="section-slider scroll-trigger">
+        <div class="section-slider__slider swiper-container m-bottom">
+        <h2 class="section-slider__title h2">New Arrivals</h2>
+            <div class="section-slider__wrapper swiper-wrapper">
+                <!-- POST -->
+                <a href="#" class="post swiper-slide">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/sneaker-1.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-margin post__name_not-border">Women's Tree Dasher</strong>
+                        <div class="post__description">
+                            <span class="post__span display-3">Limited Edition Color, Gaia</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- POST -->
+                <a href="#" class="post swiper-slide">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/sneaker-2.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-margin post__name_not-border">Men's Tree Dasher</strong>
+                        <div class="post__description">
+                            <span class="post__span display-3">Limited Edition Color, Terra</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- POST -->
+                <a href="#" class="post swiper-slide">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/sneaker-3.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-margin post__name_not-border">Women's Tree Runner</strong>
+                        <div class="post__description">
+                            <span class="post__span display-3">Limited Edition Color, Aspen</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- POST -->
+                <a href="#" class="post swiper-slide">
+                    <div class="post__inner">
+                        <img class="post__img img-cover" src="./img/sneaker-4.png" alt="Кроссовки">
+                    </div>
+                    <div class="post__info">
+                        <strong class="post__name post__name_not-margin post__name_not-border">Men's Tree Runner</strong>
+                        <div class="post__description">
+                            <span class="post__span display-3">Classic Color, Mist</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION-INFO -->
+    <section class="section-info scroll-trigger">
+        <img class="section-info__mediafile" src="./img/section-info-3.png" alt="Зелёные кроссовки">
+        <div class="container">
+            <div class="section-info__body m-bottom">
+                <h2 class="section-info__title h2">Tread Lighter</h2>
+                <p class="section-info__subtitle display-4">The standard sneaker emits 12.5 kg CO2e. Our average shoe emits 7.6 kg CO2e.Better,<br>  but we want to do more. Our goal—have no carbon footprint from the start. The first<br> step to reduce our footprint is to measure it. And even though we’re not at zero yet, we<br> can be. It’s all part of the plan.</p>
+                <a class="section-info__btn btn-dark section-info__btn_wide" href="#">Our Sustainability Approach</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION-MODULE -->
+    <section class="section-module scroll-trigger">
+        <div class="container">
+            <h2 class="section-module__title h2 text-left">Stories</h2>
+                <div class="section-module__body m-bottom">
+                    <!-- POST-->
+                    <a href="#" class="post">
+                        <div class="post__inner">
+                            <img class="post__img img-cover" src="./img/stories-1.png" alt="Кроссовки">
+                        </div>
+                        <div class="post__info">
+                            <strong class="post__name post__name_not-margin post__name_not-border">Run Hard, Tread Light</strong>
+                            <div class="post__description">
+                                <span class="post__span display-2">Meet the Tree Dasher—a performance shoe made with natural materials.</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- POST-->
+                    <a href="#" class="post">
+                        <div class="post__inner">
+                            <img class="post__img img-cover" src="./img/stories-2.png" alt="Кроссовки">
+                        </div>
+                        <div class="post__info">
+                            <strong class="post__name post__name_not-margin post__name_not-border">Our Doors Are Open</strong>
+                            <div class="post__description">
+                                <span class="post__span display-3">The well-being of our retail communities is top priority as our stores re-open around the globe.</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- POST-->
+                    <a href="#" class="post">
+                        <div class="post__inner">
+                            <img class="post__img img-cover" src="./img/stories-3.png" alt="Кроссовки">
+                        </div>
+                        <div class="post__info">
+                            <strong class="post__name post__name_not-margin post__name_not-border">We're A Certified B Corp</strong>
+                            <div class="post__description">
+                                <span class="post__span display-3">From the very beginning, the environment has been a stakeholder here.</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <!-- FORM -->
+        <form class="footer__form">
+            <span class="footer__form-span display-3">Enter your email to stay in touch!</span>
+            <div class="footer__form-inner">
+                <input class="footer__form-input input" type="text" name="email">
+                <button type="submit" class="footer__form-btn btn-gray">Sign Up</button>
+            </div>
+        </form>
+        <!-- MENU -->
+        <nav class="footer__menu">
+            <!-- LIST -->
+            <div class="footer__menu-inner">
+                <strong class="footer-strong display-3">Help</strong>
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">1-888-963-8944</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">help@allbirds.com</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Returns/Exchanges</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">FAQ/Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- LIST -->
+            <div class="footer__menu-inner">
+                <strong class="footer-strong display-3">shop</strong>
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Men's Shoes</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Women's Shoes</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a hhref="#" class="footer__menu-link">Men's Apparel</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Women's Apparel</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Socks</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Gift Cards</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Download the Allbirds App</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- LIST -->
+            <div class="footer__menu-inner">
+                <strong class="footer-strong display-3">Company</strong>
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Our Stores</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Our Story</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Our Materials</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Sustainability</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Partnerships</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Affiliates</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Bulk Orders</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Careers</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Press</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">California Transparency Act</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer__bottom">
+            <div class="footer__networks">
+                <strong class="footer-strong display-3">Follow the Flock</strong>
+                <p class="footer__description display-4">Exclusive offers, a heads up on new things, and <br>sightings of Allbirds in the wild. Oh, we have cute<br> sheep, too. #weareallbirds
+                </p>
+                <div class="footer__networks-icons">
+                    <a class="footer__networks-link" href="#">
+                        <img class="footer__networks-icon" src="./img/instagram.svg" alt="">
+                    </a>
+                    <a class="footer__networks-link" href="#">
+                        <img class="footer__networks-icon" src="./img/twitter.svg" alt="">
+                    </a>
+                    <a class="footer__networks-link" href="#">
+                        <img class="footer__networks-icon" src="./img/facebook.svg" alt="">
+                    </a>
+                    <a class="footer__networks-link" href="#">
+                        <img class="footer__networks-icon" src="./img/pinterest.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <a class="footer__logo" href="#">
+                <img class="footer__logo-img" src="./img/footer-logo.svg" alt="">
+            </a>
+            <div class="footer__flags">
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/1.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/2.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/3.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/4.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/5.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/6.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/7.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/8.svg" alt="">
+                </a>
+                <a class="footer__flag" href="#">
+                    <img class="footer__flag-img" src="./img/9.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <address class="footer__address display-3 text-center">© 2021 Allbirds, Inc. All Rights Reserved. Terms. Privacy & Accessibility</address>
+    </footer>
+ 
+</body>
+</html>

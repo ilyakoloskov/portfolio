@@ -1,0 +1,1059 @@
+/* ================================= DOCUMENTATION ================================= */
+@import reset
+
+@import fonts
+
+/* ================================= PRESETS ================================= */
+@import presets
+
+/* ================================= VARIABLES ================================= */
+@import variabless
+
+html,
+body
+    font-family: $font-primary
+    line-height: 1.25
+    scroll-behavior: smooth
+    background-color: $color-bg
+    color: $color-primary
+*
+    box-sizing: border-box
+
+/* ================================= INPUT/BUTTONS ================================= */
+
+.btn
+    display: flex
+    cursor: pointer
+    width: max-content
+    align-items: center
+    font-size: 14px
+    padding: 15px 10px
+    height: 45px
+    font-weight: 500
+    outline: none
+    position: relative
+    z-index: 2
+    justify-content: center
+    text-align: center
+    border-radius: 5px
+    background-color: $color-accent
+    border: 1px solid $color-accent
+    color: $color-success
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15)
+    text-transform: uppercase
+    font-family: 'Montserrat', sans-serif
+    &:hover
+        background: $color-success
+        color: $color-accent
+    &:active
+        background: $color-accent
+
+.title
+    text-align: center
+    color: $color-primary
+    font-weight: 600
+.ellipse
+    position: absolute
+    z-index: 5
+    height: -webkit-fill-available
+    width: 815px
+    object-fit: cover
+.fixed-phone
+    position: fixed
+    cursor: pointer
+    bottom: 10%
+    right: 5%
+    width: 75px
+    z-index: 9
+    &:hover
+        circle
+            fill: #fff
+        path
+            fill: $color-accent
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+select,
+textarea
+    height: 55px
+    padding-left: 30px
+    background: #FFFFFF
+    border: 1px solid #D1D1D1
+    border-radius: 5px
+    color: $color-bg
+    font-size: 16px
+    outline: none
+    transition: outline-color 0.5s ease-out
+    width: 100%
+    box-sizing: border-box
+    font-family: $font-primary
+    &::placeholder
+        color: $color-secondary
+    &:focus
+        border: 1px solid $color-accent
+textarea
+    padding: 18px 16px
+    min-height: 132px
+    resize: none
+select.placeholder-shown
+    color: $color-secondary
+
+select.placeholder-hidden
+    color: $color-bg
+
+/* ================================= HEADER-DESKTOP ================================= */
+.header__desktop
+    background-color: rgba(0,0,0,0.2)
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    z-index: 10
+    padding: 10px 0
+    &-wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .nav
+            ul
+                display: flex
+                justify-content: space-between
+                align-items: center
+                gap: 20px
+                // flex-wrap: wrap
+            li
+                width: 100%
+                text-align: center
+                border-right: 1px solid #2B2B2B
+                &:first-child
+                    max-width: 130px
+                    text-align: left
+                &:last-child
+                    max-width: 130px
+                    text-align: right
+                    border: none
+            a
+                color: $color-success
+                display: block
+                font-weight: 500
+                font-size: 14px
+                text-transform: uppercase
+                &:hover
+                    color: $color-accent
+    .contacts
+        display: flex
+        align-items: center
+        gap: 20px
+        padding: 0
+        .inner
+            display: flex
+            flex-direction: column
+            align-items: end
+            gap: 10px
+            &__link
+                color: $color-primary
+
+        .btn
+            width: 180px
+.inner
+    &__icons
+        display: flex
+        gap: 8px
+        i
+            font-size: 18px
+            &:before
+                color: $color-primary
+                &:hover
+                    &::before
+                        color: $color-accent
+.nav
+    .dropdown
+        position: relative
+        &::after
+            content: url("../img/icons/dropdown.svg")
+            display: inline-block
+            transform: rotate(180deg)
+            vertical-align: middle
+            transition: 0.3s
+        &:hover
+            &::after
+                transition: 0.3s
+                transform: rotate(0deg)
+        a
+            color: $color-success
+            &:hover
+                color: $color-accent
+
+        .submenu
+            background-color: $color-primary
+    li
+        position: relative
+
+    li:hover,
+    li:focus-within
+        cursor: pointer
+
+    li:focus-within a
+        outline: none
+    ul li ul
+        opacity: 0
+        position: absolute
+        transition: all 0.5s ease
+        left: 0
+        display: none
+
+    ul li:hover > ul,
+    ul li:focus-within > ul,
+    ul li ul:hover,
+    ul li ul:focus
+        opacity: 1
+        display: grid
+        gap: 15px
+        padding: 16px 24px
+        min-width: 100%
+        width: max-content
+        border-radius: 10px
+        z-index: 10
+        box-sizing: border-box
+    ul li ul li
+        clear: both
+        box-sizing: border-box
+
+/* ================================= HEADER-MOBILE ================================= */
+.header__mobile
+    display: none
+    position: sticky
+    left: 0
+    right: 0
+    top: 0
+    z-index: 11
+    background: $color-bg
+    & .header__wrap
+        display: flex
+        justify-content: space-between
+        padding: 8px 0
+        align-items: center
+        min-height: 51px
+    .nav
+        position: absolute
+        left: 0
+        transform: translateY(-10%)
+        right: 0
+        bottom: 0
+        z-index: 10
+        top: 51px
+        background: $color-bg
+        height: max-content
+        transition: 0.2s
+        display: flex
+        gap: 20px
+        overflow-y: scroll
+        z-index: 2
+        max-width: 100%
+        display: flex
+        place-content: center
+        opacity: 0
+        visibility: hidden
+        &.active
+            transition: 0.2s
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+        ul
+            display: flex
+            flex-direction: row
+            text-align: center
+            place-content: center
+            border-radius: 0
+            opacity: 1 !important
+        li
+            display: flex
+            justify-content: space-between
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12)
+            text-transform: uppercase
+        .dropdown
+            display: grid
+            justify-content: stretch
+            position: relative
+            padding: 0
+            &::after
+                position: absolute
+                right: 20px
+                top: 10px
+            &:hover
+                &::after
+                    transform: rotate(0deg)
+        .submenu
+            position: static
+            border-radius: 0
+            display: none !important
+            min-height: 0
+            a,li
+                font-size: 12px
+        a,
+        span
+            color: $color-success
+            font-size: 16px
+            padding: 16px
+            width: 100%
+            &:hover
+                background: $color-success
+                color: $color-primary
+    .inner
+        display: flex
+        gap: 20px
+        align-items: center
+        &__icons
+            justify-content: center
+            align-items: center
+            i
+                font-size: 21px
+        &__contacts
+            display: flex
+            flex-direction: column
+            gap: 10px
+    .logo
+        width: 100px
+        img
+            width: 100%
+    .contacts
+        display: flex
+        align-items: center
+        gap: 20px
+        padding: 0
+        .contact__icon
+            margin: 0
+            width: 25px
+        .item
+            display: flex
+            padding: 0
+            font-size: 12px
+        a
+            color: $color-accent !important
+// BURGER
+.burger
+    display: flex
+    flex-direction: column
+    align-items: end
+    z-index: 11
+    cursor: pointer
+    position: relative
+    width: 30px
+    .item
+        display: block
+        transition: 0.3s
+        height: 3px
+        background-color: $color-accent
+        cursor: pointer
+        margin-bottom: 4px
+        border-radius: 5px
+        width: 100%
+    &.active
+        .item
+            transition: 0.1s
+            margin: 0
+            &:first-child
+                transform: rotate(45deg)
+                margin: 0
+            &:nth-child(2)
+                display: none
+            &:last-child
+                transform: rotate(-45deg)
+                margin-top: -3px
+
+/* ================================= MAIN-SECTION ================================= */
+.main
+    position: relative
+    &__wrap
+        min-height: 100vh
+        display: grid
+        place-content: center
+        gap: 30px
+        color: $color-primary
+        max-width: 500px
+        .h1
+            max-width: 350px
+            line-height: 1
+            strong
+                display: block
+        .btn
+            width: 275px
+    .arrow-down
+        position: absolute
+        bottom: 15%
+        left: 47%
+
+.arrow-down
+    margin: 30px
+    & span
+        display: block
+        width: 30px
+        height: 30px
+        border-bottom: 5px solid $color-accent
+        border-right: 5px solid $color-accent
+        transform: rotate(45deg)
+        margin: -16px
+        animation: arrow-down 2s infinite
+
+    & span:nth-child(2)
+        animation-delay: -0.2s
+
+    & span:nth-child(3)
+        animation-delay: -0.4s
+
+@keyframes arrow-down
+    0%
+        opacity: 0
+        transform: rotate(45deg) translate(-20px,-20px)
+
+    50%
+        opacity: 1
+
+    100%
+        opacity: 0
+        transform: rotate(45deg) translate(20px,20px)
+
+.describe
+    padding: 60px 0
+    position: relative
+    overflow: hidden
+    background: url(../img/backgroundDescribe.png)
+    background-size: cover
+    .title
+        color: $color-primary
+        margin-bottom: 10px
+    .subtitle
+        // background: $color-surface
+        padding: 10px 20px
+        display: block
+        max-width: 345px
+        text-align: center
+        color: $color-accent
+        font-weight: 700
+        margin: 0 auto
+        border-radius: 3px
+        margin-bottom: 45px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 70px
+        .item
+            text-align: center
+            &__title
+                color: $color-secondary
+                font-weight: 700
+                margin-bottom: 20px
+            &__descr
+                color: $color-primary
+
+.advant
+    padding: 85px 0
+    background: url(../img/backgroundAdvant.png)
+    background-size: cover
+    background-position: center
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 80px
+        .item
+            text-align: center
+            &__strong
+                font-weight: 800
+            &__descr
+                color: $color-primary
+                font-weight: 600
+    .ellipse
+        bottom: -100%
+        right: 0
+
+.about
+    position: relative
+    padding: 180px 0
+    &__wrap
+        text-align: center
+        color: $color-primary
+    &__title
+        margin-bottom: 60px
+        font-weight: 600
+    &__descr
+        max-width: 750px
+        margin: auto
+        line-height: 1.7
+
+.section-info
+    background: url(../img/backgroundDescribe.png)
+    background-size: cover
+    padding: 100px 0
+    &__wrap
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 100px
+    .inner
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &__title
+            font-weight: 600
+        &__subtitle
+            color: $color-accent
+            font-weight: 600
+        .form
+            &__inner
+                display: flex
+                gap: 20px
+            .btn
+                width: 100%
+.band
+    background: url(../img/backgroundBand.png)
+    background-size: cover
+    &__title
+        margin-bottom: 45px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 70px
+        .item
+            display: flex
+            flex-direction: column
+            gap: 15px
+            &__title
+                font-weight: 700
+            &__strong
+                font-weight: 700
+            &__descr
+                color: $color-secondary
+
+.repertoire
+    background: url(../img/repertBg.jpg)
+    background-size: cover
+    background-position: center
+    background-attachment: fixed
+    position: relative
+    padding: 55px
+    margin-bottom: 90px
+    &__title
+        margin-bottom: 60px
+    &__wrap
+        display: flex
+        flex-direction: column
+        position: relative
+        z-index: 1
+        margin-bottom: 50px
+        .item
+            border-bottom: 1px solid $color-primary
+            &:first-child
+                border-top: 1px solid $color-primary
+            &__accordion
+                cursor: pointer
+                padding: 10px 16px 10px 24px
+                text-align: left
+                outline: none
+                display: flex
+                border: none
+                align-items: center
+                justify-content: space-between
+                color: $color-primary
+                transition: 0.2s
+                font-weight: 700
+                &:first-child
+                .icon
+                    transform: rotate(180deg)
+                    transition: 0.2s
+                    path
+                        fill: $color-primary
+                &.active
+                    color: $color-success
+                    .icon
+                        transform: rotate(0deg)
+                        transition: 0.2s
+                        path
+                            fill: $color-accent
+                &:hover
+                    border-color: $color-accent
+                    color: $color-accent
+                    transition: 0.2s
+                    .icon
+                        path
+                            fill: $color-accent
+            &__panel
+                max-height: 0
+                overflow: hidden
+                transition: max-height 0.2s ease-out
+                background: rgba(217, 217, 217, 0.2)
+                .info
+                    padding: 15px 0px
+                    color: $color-primary
+                    padding: 40px 30px
+                    &__list
+                        display: flex
+                        flex-direction: column
+                        gap: 10px
+                        list-style: auto
+                        list-style-position: inside
+                        .item
+                            &__strong
+                                font-weight: 600
+                                color: $color-primary !important
+    &__btn
+        margin: 0 auto
+        width: 360px
+.gallery
+    margin-bottom: 90px
+    .title
+        margin-bottom: 30px
+    &__img
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
+    &__item
+        overflow: hidden
+        transition: 0.4s
+        img
+            transition: 0.4s
+            height: 100%
+        &:hover
+            img
+                transform: scale(1.1)
+                transition: 0.4s
+    &__videos
+        max-width: 1280px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        margin: 0 auto
+.section-form
+    position: relative
+    padding: 50px 0
+    .title,
+    .subtitle
+        max-width: 375px
+        text-align: center
+        margin: 0 auto
+        display: block
+    .title
+        margin-bottom: 10px
+    .form
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 40px
+        padding: 100px 0
+        .btn
+            width: 100%
+            max-width: 260px
+
+.documents
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
+        .item
+            display: grid
+            place-items: center
+            position: relative
+            overflow: hidden
+            &__img
+                filter: brightness(0.6)
+                transition: 0.4s
+            &__name
+                position: absolute
+                color: $color-primary
+            &:hover
+                .item
+                    &__img
+                        transition: 0.4s
+                        filter: brightness(1)
+                        transform: scale(1.1)
+
+/* ================================= FORM ================================= */
+
+.form
+    display: flex
+    flex-direction: column
+    gap: 20px
+    input,
+    button
+        height: 60px
+    &__inner
+        flex-direction: column
+    .inner
+        &__wrap
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 20px
+    &__confident
+        font-size: 12px
+        color: $color-secondary
+
+.section-video
+    .video
+        width: 100%
+        height: 80vh
+        object-fit: cover
+
+.band
+    padding: 60px 0
+    &__title
+        text-align: center
+.documents
+    padding: 40px 0
+
+.social-network
+    padding: 60px 0
+    .title
+        margin-bottom: 30px
+    &__wrap
+        display: flex
+        gap: 60px
+        justify-content: center
+    .item
+        font-size: 98px
+        color: $color-primary
+.tabs
+    &__btns
+        display: flex
+        max-width: 500px
+        margin: 0 auto
+        .btn
+            background: none
+            border: none
+            font-weight: 700
+            height: 60px
+            text-transform: uppercase
+            border-bottom: 2px solid #00000061
+            width: 100%
+            cursor: pointer
+            font-size: 20px
+            &.active
+                color: $color-accent
+                border-color: $color-accent
+            &:hover
+                color: $color-accent
+    .tab
+        display: none
+        gap: 16px
+        color: $color-primary
+        padding: 30px 0
+        &.active
+            display: grid
+.partners
+    padding: 80px 0
+    background: $color-primary
+    &__title
+        color: $color-bg
+        margin-bottom: 60px
+    &__wrap
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 50px
+        .item
+            display: flex
+            align-self: center
+            img
+                max-height: 120px
+                max-width: 170px
+                object-fit: contain
+                margin: 0 auto
+/* ================================= FOOTER ================================= */
+
+.footer
+    &__top
+        background: #171717
+        &-wrap
+            display: grid
+            grid-template-columns: repeat(5, 1fr)
+            padding: 60px 0
+        .logo
+            width: 140px
+        .item
+            display: flex
+            flex-direction: column
+            align-items: start
+            gap: 10px
+            &__title
+                font-weight: 600
+            &__inner
+                display: flex
+                flex-direction: column
+                gap: 10px
+                a
+                    font-size: 14px
+                    color: #BBBBBB
+            &__icons
+                display: flex
+                align-items: center
+                flex-direction: row
+                gap: 5px
+        .btn
+            width: 270px
+    &__bottom
+        padding: 20px 0
+        text-align: center
+        background: #000
+        font-size: 12px
+        color: #BBBBBB
+
+// POPUP
+/* Важная часть */
+.popup__bg
+    position: fixed
+    display: grid
+    place-content: center
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100vh
+    background: rgba(30, 34, 51, 0.9)
+    opacity: 0
+    pointer-events: none
+    transition: 0.2s all
+    z-index: 99
+.popup__bg.active
+    opacity: 1
+    pointer-events: all
+    transition: 0.2s all
+    z-index: 99
+.popup
+    width: 406px
+    position: relative
+    transition: 0.2s all
+    background: $color-bg
+    border-radius: 16px
+    display: grid
+    gap: 50px
+    .form
+        padding: 40px 30px
+        text-align: center
+        gap: 10px
+        input
+            height: 50px
+        &__title
+            font-size: 24px
+            color: $color-accent
+        &__subtitle
+            color: $color-secondary
+            font-size: 14px
+        &__checkbox
+            display: flex
+            gap: 10px
+            align-items: start
+        &__inner
+            display: flex
+            flex-direction: column
+            gap: 10px
+            .btn
+                width: 100%
+        &__descr
+            font-size: 12px
+            color: $color-secondary
+        .btn
+            width: 100%
+.popup.active // При добавлении класса 'active'
+    transition: 0.2s all
+.popup__close
+    position: absolute
+    right: 20px
+    top: 20px
+    width: 20px
+    height: auto
+.close-popup
+    cursor: pointer
+
+/* ================================= RESPONSIVE ================================= */
+@media (max-width: 1280px)
+    .container,
+    .container__fluid
+        max-width: 100%
+        width: auto
+
+@media (max-width: 1140px)
+    .section-form
+        .form
+            max-width: 100%
+
+@media (max-width: 1024px)
+    .header__desktop
+        display: none
+    .header__mobile
+        display: block
+        .wrap
+            gap: 40px
+    .info__wrap
+        .item
+            flex-direction: column
+            gap: 20px
+            &__img
+                width: fit-content
+                order: 1 !important
+
+@media (max-width: 960px)
+    .btn,
+    .btn--second
+        font-size: 14px
+    .main__wrap
+        min-height: 60vh
+
+    .section__form
+        .form
+            padding: 50px 0
+            &__wrap
+                grid-template-columns: 1fr
+                gap: 40px
+        &__title
+            text-align: left
+        &__info
+            position: static
+    .section-video
+        .video
+            height: 60vh
+    .describe,
+    .advant
+        .subtitle
+            max-width: fit-content
+        &__wrap
+            gap: 50px
+    .gallery
+        &__img
+            grid-template-columns: repeat(3, 1fr)
+    .footer__top
+        .btn
+            width: 170px
+
+@media (max-width: 768px)
+    .arrow-down
+        display: none
+    .container-fluid
+        padding: 0
+    .header__mobile
+        .nav
+            place-content: start
+            ul
+                text-align: left
+                flex-direction: column
+                width: 100%
+    .describe
+        &__wrap
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            .item
+                &:last-child
+                    grid-column: 1/-1
+                    max-width: 350px
+    .advant
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+    .about
+        padding: 80px 0
+    .section-info
+        &__wrap
+            grid-template-columns: 1fr
+            gap: 50px
+    .band
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+            gap: 50px
+    .repertoire
+        padding: 50px 0
+    .section-form
+        .form
+            grid-template-columns: repeat(2, 1fr)
+            gap: 20px
+            padding: 50px 0
+            .btn
+                grid-column: 1/-1
+                max-width: 100%
+    .form
+        .inner
+            &__wrap
+                grid-template-columns: 1fr
+    .documents
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+    .partners
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+    .gallery
+        &__videos
+            grid-template-columns: 1fr
+            padding: 10px !important
+            iframe
+                width: 100% !important
+    .social-network
+        &__wrap
+            display: grid
+            grid-template-columns: 1fr 1fr
+            justify-items: center
+            gap: 20px
+        .item
+            font-size: 64px
+    .footer
+        &__top-wrap
+            grid-template-columns: repeat(4, 1fr)
+            gap: 20px
+            .logo
+                grid-column: 1/-1
+@media (max-width: 600px)
+    .section-info
+        padding: 50px 0
+    .section-video
+        .video
+            height: 30vh
+    .gallery
+        &__img
+            grid-template-columns: repeat(2, 1fr)
+    // .popup
+    //     max-width: 600px
+    //     width: max-content
+    //     grid-template-columns: 1fr
+    //     background: $color-success
+    //     .form
+    //         &__inner
+    //             gap: 20px
+    .documents
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+    .footer
+        &__top-wrap
+            grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 480px)
+    .main
+        &__wrap
+            text-align: center
+            .btn
+                width: 100%
+            .arrow-down
+                position: absolute
+                bottom: 10%
+                left: 43%
+    .describe
+        padding: 40px 0
+        &__wrap
+            grid-template-columns: 1fr
+            .item
+                max-width: 350px
+    .advant
+        padding: 40px 0
+        &__wrap
+            gap: 50px 20px
+    .section-form
+        .form
+            grid-template-columns: repeat(1, 1fr)
+    .section-info
+        .inner
+            .form__inner
+                flex-direction: column
+        .descr
+            text-align: center
+    .band
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+            gap: 20px
+    .repertoire
+        &__btn
+            width: 100%
+    .popup
+        width: 90%
+        margin: 0 auto
+@media (max-width: 375px)

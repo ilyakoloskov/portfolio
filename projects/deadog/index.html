@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</head>
+<body class='page'>
+    <!-- HEADER -->
+    <header class='header'>
+        <div class='header__logo logo'>
+            <strong class='logo__strong h3'>DEADOG</strong>
+            <span class='logo__span f-small gray'>COMPOSER AND SOUND DESIGNER</span>
+        </div>
+        <div class='header__nav'>
+            <ul class='menu__list header__menu menu'>
+                <li class='menu__li'>
+                    <a href="#" class='menu__link f-small'>Projects</a>
+                </li>
+                <li class='menu__li'>
+                    <a href="#" class='menu__link f-small'>About</a>
+                </li>
+                <li class='menu__li'>
+                    <a href="#" class='menu__link f-small'>Contact</a>
+                </li>
+            </ul>
+            <div class='burger'>
+                <div class='burger__span'></div>
+                <div class='burger__span'></div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main class='main'>
+        <!-- MAIN-SECTION -->
+        <section class='main-section'>
+            <video preload="true" autoplay="true" loop="true" muted="muted" class='main-section__video'
+                src="assets/video/doom.mp4"></video>
+        </section>
+        <!-- PROJECTS -->
+        <section class='projects'>
+            <div class='section-header'>
+                <h2 class='section-header__title h2'>
+                    Projects
+                </h2>
+            </div>
+            <div class='projects__wrap'>
+                <a href='#' class='projects__article' style="grid-column: 1/3;">
+                    <span class='projects__article-span'>DOOM</span>
+                    <img class='projects__article-img' src="assets/img/doom 1.png" alt="">
+                </a>
+                <a href='#' class='projects__article' style="grid-column: 1/3;">
+                    <span class='projects__article-span'>DIABLO IV</span>
+                    <img class='projects__article-img' src="assets/img/diablo 1.png" alt="">
+                </a>
+                <a href='#' class='projects__article' style="grid-column: 3/-1; grid-row: 1/3">
+                    <span class='projects__article-span'>ASSASINS CREED</span>
+                    <img class='projects__article-img' src="assets/img/ac 1.png" alt="">
+                </a>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section id='about' class='about'>
+            <div class='about__wrap'>
+                <div class='about__left '>
+                    <div class='section-header'>
+                        <h2 class='section-header__title h2'>
+                            ABOUT
+                        </h2>
+                    </div>
+                    <div class='about__content content-page'>
+                        <p>
+                            Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач.Задача организации, в особенности же дальнейшее развитие различных форм 
+                            деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач.Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации позици 
+                        </p>
+                    </div>
+                </div>
+                <div class='about__instagram instagram'>
+                    <a href='#' class='instagram__box'>
+                        <img class='instagram__img' src="assets/img/ac 1.png" alt="">
+                    </a>
+                    <a href='#' class='instagram__box'>
+                        <img class='instagram__img' src="assets/img/ac 1.png" alt="">
+                    </a>
+                    <a href='#' class='instagram__box'>
+                        <img class='instagram__img' src="assets/img/ac 1.png" alt="">
+                    </a>
+                    <a href='#' class='instagram__box'>
+                        <img class='instagram__img' src="assets/img/ac 1.png" alt="">
+                    </a>
+                    <a href='#' class='instagram__box'>
+                        <img class='instagram__img' src="assets/img/ac 1.png" alt="">
+                    </a>
+                    <a href='#' class='instagram__box'>
+                        <img class='instagram__img' src="assets/img/ac 1.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACTS -->
+        <section id='contacts' class='contacts'>
+                <div class='section-header'>
+                    <h2 class='section-header__title h2'>
+                        CONTACTS
+                    </h2>
+                </div>
+                <form class='form' action="">
+                    <input class='form__input' type="text" placeholder="Name">
+                    <input class='form__input' type="text" placeholder="Last name">
+                    <input class='form__input' type="text" placeholder="Email">
+                    <textarea class='form__textarea' name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button class='form__button f-middle'>SUBMIT</button>
+                </form>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class='footer'>
+        <div class='footer__logo logo'>
+            <strong class='logo__strong h3'>DEADOG</strong>
+            <span class='logo__span f-small gray'>COMPOSER AND SOUND DESIGNER</span>
+        </div>
+        <div class='footer__network network'>
+            <a class='network__link' href="#">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a class='network__link' href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class='network__link' href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- PRELOADER -->
+    <div id="preloader" class='preloader'>
+        <h2 class="preloader__title">DEADOG</h2>
+    </div>
+
+</body>
+</html>

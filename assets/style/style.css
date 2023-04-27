@@ -1,0 +1,612 @@
+/* ================================= DOCUMENTATION ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: StretchPro;
+  src: url(../fonts/StretchPro.otf);
+}
+@media (max-width: 767px) {
+  .h1 {
+    font-size: calc(28px + 166.6 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h1 {
+    font-size: calc(28px + 98 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h2 {
+    font-size: calc(24px + 47.6 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h2 {
+    font-size: calc(24px + 28 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h3 {
+    font-size: calc(24px + 1.7 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h3 {
+    font-size: calc(24px + 1 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h4 {
+    font-size: calc(21px + 5.1 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h4 {
+    font-size: calc(21px + 3 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h5 {
+    font-size: calc(18px + 5.1 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h5 {
+    font-size: calc(18px + 3 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h6 {
+    font-size: calc(16px + 3.4 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h6 {
+    font-size: calc(16px + 2 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs64 {
+    font-size: calc(25px + 66.3 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs64 {
+    font-size: calc(25px + 39 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs40 {
+    font-size: calc(21px + 32.3 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs40 {
+    font-size: calc(21px + 19 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs32 {
+    font-size: calc(16px + 27.2 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs32 {
+    font-size: calc(16px + 16 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs18 {
+    font-size: calc(14px + 6.8 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs18 {
+    font-size: calc(14px + 4 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs16 {
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs16 {
+    font-size: calc(14px + 2 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs14 {
+    font-size: calc(14px + 0 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs14 {
+    font-size: calc(14px + 0 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs12 {
+    font-size: calc(12px + 0 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs12 {
+    font-size: calc(12px + 0 * (100vw / 1980));
+  }
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ================================= PRESETS ================================= */
+.page {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: red !important;
+  transition: 0.2s;
+}
+
+b,
+strong {
+  color: #C4373C !important;
+  font-weight: 600;
+}
+
+button {
+  outline: 0;
+}
+
+p {
+  line-height: 1.4;
+}
+
+small {
+  display: inline-block;
+}
+
+/* ================================= MAIN STYLE ================================= */
+.container,
+.container-fluid {
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+}
+
+.coneriner-fluid {
+  width: 95%;
+}
+
+.logo {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+  transition: 0.2s;
+  font-weight: 700;
+}
+
+.icon {
+  height: auto;
+  width: auto;
+  border-radius: 0;
+}
+
+.bg-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  border-radius: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ================================= GRID ================================= */
+.grid-col__2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 15px;
+}
+.grid-col__3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 15px;
+}
+.grid-col__4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 15px;
+}
+.grid-col__fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  gap: 35px 45px;
+}
+
+/* ================================= SLICK ================================= */
+.slick-slide {
+  margin-right: 10px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  list-style-type: none;
+}
+.slick-dots li {
+  margin-right: 15px;
+}
+.slick-dots button {
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 100%;
+  background-color: #000;
+  border: none;
+  text-indent: -9999px;
+}
+.slick-dots li.slick-active button {
+  background-color: #4F7419;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  margin-right: 10px;
+  margin-left: 1px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+  padding: 0 !important;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -60px;
+}
+
+.slick-next {
+  right: -60px;
+}
+
+@keyframes wobble {
+  16.65% {
+    transform: translateY(8px);
+  }
+  33.3% {
+    transform: translateY(-6px);
+  }
+  49.95% {
+    transform: translateY(4px);
+  }
+  66.6% {
+    transform: translateY(-2px);
+  }
+  83.25% {
+    transform: translateY(1px);
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+.wobble {
+  animation: wobble 2s infinite;
+}
+
+/* ================================= VARIABLES ================================= */
+@font-face {
+  font-family: StretchPro;
+  src: url(../fonts/StretchPro.otf);
+}
+@media (max-width: 767px) {
+  .h1 {
+    font-size: calc(28px + 166.6 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h1 {
+    font-size: calc(28px + 98 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h2 {
+    font-size: calc(24px + 47.6 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h2 {
+    font-size: calc(24px + 28 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h3 {
+    font-size: calc(24px + 1.7 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h3 {
+    font-size: calc(24px + 1 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h4 {
+    font-size: calc(21px + 5.1 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h4 {
+    font-size: calc(21px + 3 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h5 {
+    font-size: calc(18px + 5.1 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h5 {
+    font-size: calc(18px + 3 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .h6 {
+    font-size: calc(16px + 3.4 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .h6 {
+    font-size: calc(16px + 2 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs64 {
+    font-size: calc(25px + 66.3 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs64 {
+    font-size: calc(25px + 39 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs40 {
+    font-size: calc(21px + 32.3 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs40 {
+    font-size: calc(21px + 19 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs32 {
+    font-size: calc(16px + 27.2 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs32 {
+    font-size: calc(16px + 16 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs18 {
+    font-size: calc(14px + 6.8 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs18 {
+    font-size: calc(14px + 4 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs16 {
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs16 {
+    font-size: calc(14px + 2 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs14 {
+    font-size: calc(14px + 0 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs14 {
+    font-size: calc(14px + 0 * (100vw / 1980));
+  }
+}
+
+@media (max-width: 767px) {
+  .fs12 {
+    font-size: calc(12px + 0 * ((100vw - 320px) / 1980));
+  }
+}
+@media (min-width: 767px) {
+  .fs12 {
+    font-size: calc(12px + 0 * (100vw / 1980));
+  }
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.center {
+  text-align: center;
+}
+
+body {
+  font-family: StretchPro;
+}
+
+.header {
+  background: #000;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: end;
+  border-bottom: 1px solid #fff;
+  padding: 25px 0;
+}
+
+.main-screen {
+  min-height: 100vh;
+  background-color: #000;
+}
+.main-screen__title {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nav__link {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

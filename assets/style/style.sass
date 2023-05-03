@@ -10,6 +10,9 @@
 /* ================================= VARIABLES ================================= */
 @import variabless
 
+html
+    scroll-behavior: smooth
+
 body
     font-family: StretchPro
     background: #000
@@ -23,7 +26,6 @@ section
     top: 0
     background: #000
     z-index: 99
-    margin-bottom: 20px
     &__wrapper
         display: flex
         justify-content: space-between
@@ -42,15 +44,18 @@ section
 
 .main-screen
     &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
         min-height: calc(80vh - 67px)
         position: relative
         padding: 20px
+    &__inner
+        max-width: 50%
     &__title
-        padding-top: 10vh
         color: #fff
-        margin-bottom: 20px
+        margin-bottom: 40px
         text-transform: uppercase
-        max-width: 40vw
     &__descr
         font-family: $font-secondary
 
@@ -90,3 +95,20 @@ section
         justify-content: space-between
     &__cover
         width: 100%
+    &__link
+        display: flex
+        align-items: center
+        gap: 10px
+        color: #fff
+        &:hover
+            &::after
+                transform: translate(3px, -3px)
+                transition: 0.3s
+        &::after
+            content: url(../icons/arrow-diag.svg)
+            transition: 0.3s
+    &:nth-child(2n)
+        .work__link
+            align-self: end
+        .work__cover
+            order: -1

@@ -3,6 +3,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,23 +61,23 @@ table {
 }
 @media (max-width: 767px) {
   .h1 {
-    font-size: calc(28px + 166.6 * ((100vw - 320px) / 1980));
+    font-size: calc(28px + 98.6 * ((100vw - 320px) / 1980));
   }
 }
 @media (min-width: 767px) {
   .h1 {
-    font-size: calc(28px + 98 * (100vw / 1980));
+    font-size: calc(28px + 58 * (100vw / 1980));
   }
 }
 
 @media (max-width: 767px) {
   .h2 {
-    font-size: calc(24px + 47.6 * ((100vw - 320px) / 1980));
+    font-size: calc(24px + 30.6 * ((100vw - 320px) / 1980));
   }
 }
 @media (min-width: 767px) {
   .h2 {
-    font-size: calc(24px + 28 * (100vw / 1980));
+    font-size: calc(24px + 18 * (100vw / 1980));
   }
 }
 
@@ -200,6 +202,10 @@ table {
   }
 }
 
+.f-sec {
+  font-family: "Rajdhani", sans-serif;
+}
+
 .bold {
   font-weight: 900;
 }
@@ -264,11 +270,11 @@ small {
 }
 
 .container {
-  width: 90%;
+  max-width: 90%;
 }
 
 .coneriner-fluid {
-  width: 95%;
+  max-width: 100%;
 }
 
 .logo {
@@ -299,7 +305,7 @@ small {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 0;
+  z-index: -1;
   border-radius: 0;
 }
 
@@ -418,23 +424,23 @@ p {
 }
 @media (max-width: 767px) {
   .h1 {
-    font-size: calc(28px + 166.6 * ((100vw - 320px) / 1980));
+    font-size: calc(28px + 98.6 * ((100vw - 320px) / 1980));
   }
 }
 @media (min-width: 767px) {
   .h1 {
-    font-size: calc(28px + 98 * (100vw / 1980));
+    font-size: calc(28px + 58 * (100vw / 1980));
   }
 }
 
 @media (max-width: 767px) {
   .h2 {
-    font-size: calc(24px + 47.6 * ((100vw - 320px) / 1980));
+    font-size: calc(24px + 30.6 * ((100vw - 320px) / 1980));
   }
 }
 @media (min-width: 767px) {
   .h2 {
-    font-size: calc(24px + 28 * (100vw / 1980));
+    font-size: calc(24px + 18 * (100vw / 1980));
   }
 }
 
@@ -559,6 +565,10 @@ p {
   }
 }
 
+.f-sec {
+  font-family: "Rajdhani", sans-serif;
+}
+
 .bold {
   font-weight: 900;
 }
@@ -581,25 +591,31 @@ p {
 
 body {
   font-family: StretchPro;
+  background: #000;
+  color: #fff;
+}
+
+section {
+  margin-bottom: 60px;
 }
 
 .header {
+  position: sticky;
+  top: 0;
   background: #000;
+  z-index: 99;
+  margin-bottom: 20px;
 }
 .header__wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #fff;
   padding: 25px 0;
 }
 
-.main-screen {
-  min-height: 100vh;
-  background-color: #000;
-}
-.main-screen__title {
+.logo {
   color: #fff;
-  text-transform: uppercase;
 }
 
 .nav__list {
@@ -609,4 +625,56 @@ body {
 }
 .nav__link {
   color: #fff;
+}
+
+.main-screen__wrapper {
+  min-height: calc(80vh - 67px);
+  position: relative;
+  padding: 20px;
+}
+.main-screen__title {
+  padding-top: 10vh;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  max-width: 40vw;
+}
+.main-screen__descr {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.ticker__list {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+.ticker__item {
+  color: #fff;
+}
+.works__title {
+  display: block;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+.works__inner {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 20px;
+}
+.work__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.work__cover {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

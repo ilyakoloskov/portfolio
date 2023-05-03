@@ -1,13 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap')
+
+$font-secondary: 'Rajdhani', sans-serif
+
 @font-face
     font-family: StretchPro
     src: url(../fonts/StretchPro.otf)
 
-$font-primary: 'StretchPro', sans-serif
-
 // FONT-SIZE-DESKTOP
-$d-h1: 126
-$d-h2: 52
+$d-h1: 86
+$d-h2: 42
 $d-h3: 25
 $d-h4: 24
 $d-h5: 21
@@ -75,6 +77,9 @@ $maxWidth: 1980
     @include responsive-font($d-fontMiddle, $m-fontMiddle)
 .fs12
     @include responsive-font($d-fontSmall, $m-fontSmall)
+
+.f-sec
+    font-family: $font-secondary
 
 .bold
     font-weight: 900

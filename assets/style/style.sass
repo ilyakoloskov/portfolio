@@ -12,22 +12,26 @@
 
 body
     font-family: StretchPro
+    background: #000
+    color: #fff
 
+section
+    margin-bottom: 60px
 // HEADER
 .header
+    position: sticky
+    top: 0
     background: #000
+    z-index: 99
+    margin-bottom: 20px
     &__wrapper
         display: flex
-        justify-content: end
+        justify-content: space-between
+        align-items: center
         border-bottom: 1px solid #fff
         padding: 25px 0
-.main-screen
-    min-height: 100vh
-    background-color: #000
-    &__title
-        color: #fff
-        text-transform: uppercase
-
+.logo
+    color: #fff
 .nav
     &__list
         display: flex
@@ -35,3 +39,54 @@ body
         gap: 20px
     &__link
         color: #fff
+
+.main-screen
+    &__wrapper
+        min-height: calc(80vh - 67px)
+        position: relative
+        padding: 20px
+    &__title
+        padding-top: 10vh
+        color: #fff
+        margin-bottom: 20px
+        text-transform: uppercase
+        max-width: 40vw
+    &__descr
+        font-family: $font-secondary
+
+.ticker
+    &__list
+        display: flex
+        gap: 20px
+        padding: 20px 0
+    &__item
+        color: #fff
+        &::after
+            // content: url('../img/png/Hainz Studio/PNG/grv_26.png')
+            // width: 10px
+            // height: 10px
+            // object-fit: contain
+
+.works
+    &__title
+        display: block
+        padding-bottom: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid #fff
+    &__inner
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        gap: 20px
+
+.work
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 10px
+    border-bottom: 1px solid #fff
+    padding-bottom: 20px
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__cover
+        width: 100%

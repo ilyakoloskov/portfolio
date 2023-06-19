@@ -1,3 +1,6 @@
+<!-- PARRALAX
+add link in tag
+GSAP -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,17 +16,11 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <a href="#" class="logo">
-            IK
-            <!-- <img class="logo" src="./assets/img/png/Hainz Studio/PNG/grv_103.png" alt="logo" /> -->
-          </a>
+          <a href="#" class="logo"> IK </a>
           <nav class="header__nav nav">
             <ul class="nav__list">
               <li class="nav__li">
                 <a href="#works" class="nav__link">works</a>
-              </li>
-              <li class="nav__li">
-                <a href="#" class="nav__link">music</a>
               </li>
               <li class="nav__li">
                 <a href="#" class="nav__link">about me</a>
@@ -31,10 +28,42 @@
               <li class="nav__li">
                 <a href="#" class="nav__link">contact me</a>
               </li>
-              <!-- <li class="nav__li">
-                <a href="./projects/Itunes/" class="nav__link fs16">Itunes</a>
-              </li> -->
             </ul>
+            <div class="nav__network network">
+              <div class="network__item">
+                <a class="network__link" href="">
+                  <img class="network__icon" src="./assets/icons/email.svg" alt="" />
+                </a>
+              </div>
+              <div class="network__item">
+                <a class="network__link" href="">
+                  <img class="network__icon" src="./assets/icons/github.svg" alt="" />
+                </a>
+              </div>
+              <div class="network__item">
+                <a class="network__link" href="">
+                  <img class="network__icon" src="./assets/icons/telegram.svg" alt="" />
+                </a>
+              </div>
+              <div class="network__item">
+                <a class="network__link fs18" href="">
+                  hh
+                  <!-- <img class="network__icon" src="./assets/icons/hh.svg" alt="" /> -->
+                </a>
+              </div>
+            </div>
+            <div class="burger" onclick="this.classList.toggle('burger_active')">
+              <svg class="burger__show" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                <path class="burger__line burger__line_1" d="M 30,35 H 70 " />
+                <path class="burger__line burger__line_2" d="M 50,50 H 30 L 34,32" />
+                <path class="burger__line burger__line_3" d="M 50,50 H 70 L 66,68" />
+                <path class="burger__line burger__line_4" d="M 30,65 H 70 " />
+              </svg>
+              <svg class="burger__close" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                <path class="burger__line" d="M 34,32 L 66,68" />
+                <path class="burger__line" d="M 66,32 L 34,68" />
+              </svg>
+            </div>
           </nav>
         </div>
       </div>
@@ -81,6 +110,23 @@
                 voluptate aliquam, placeat quaerat quae cupiditate nisi non similique nesciunt eaque? Aliquid deserunt
                 quae commodi dolor voluptates perferendis alias, nobis quod.
               </p>
+              <div class="tags fs14">
+                <a class="tags__tag" href="#">HTML</a>
+                <a class="tags__tag" href="#">CSS</a>
+                <a class="tags__tag" href="#">SCSS/SASS</a>
+                <a class="tags__tag" href="#">PUG</a>
+                <a class="tags__tag" href="#">BEM</a>
+                <a class="tags__tag" href="#">Git</a>
+                <a class="tags__tag" href="#">Bootstrap</a>
+                <a class="tags__tag" href="#">Tailwind CSS</a>
+                <a class="tags__tag" href="#">Webpack</a>
+                <a class="tags__tag" href="#">React</a>
+                <a class="tags__tag" href="#">Vue</a>
+                <a class="tags__tag" href="#">Vuex</a>
+                <a class="tags__tag" href="#">Wordpress</a>
+                <a class="tags__tag" href="#">GSAP</a>
+                <a class="tags__tag" href="#">Figma</a>
+              </div>
             </div>
             <img src="./assets/img/me.jpg" class="main-screen__bg bg-img" alt="Ilya Koloskov" />
           </div>
@@ -177,7 +223,7 @@
         </div>
       </section>
       <!-- MUSIC -->
-      <section class="music">
+      <!-- <section class="music">
         <div class="container">
           <h2 class="music__title h2">MUSIC</h2>
 
@@ -222,7 +268,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <footer class="footer"></footer>
   </body>

@@ -595,11 +595,79 @@ html {
 body {
   font-family: StretchPro;
   background: #000;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 section {
   margin-bottom: 60px;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  filter: url(#gooeyness);
+}
+.burger svg {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.burger__line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  stroke-width: 5.5px;
+  transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+}
+.burger__line_1 {
+  stroke-dasharray: 40 40;
+}
+.burger__line_2 {
+  stroke-dasharray: 21 39;
+}
+.burger__line_3 {
+  stroke-dasharray: 21 39;
+}
+.burger__line_4 {
+  stroke-dasharray: 40 40;
+}
+.burger__close {
+  transition: transform 400ms 50ms;
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.burger.burger_active .burger__line {
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+}
+.burger.burger_active .burger__line_1 {
+  stroke-dasharray: 1 40;
+  stroke-dashoffset: -33px;
+}
+.burger.burger_active .burger__line_2 {
+  stroke-dasharray: 5 39;
+  stroke-dashoffset: -37px;
+}
+.burger.burger_active .burger__line_3 {
+  stroke-dasharray: 5 39;
+  stroke-dashoffset: -37px;
+}
+.burger.burger_active .burger__line_4 {
+  stroke-dasharray: 1 40;
+  stroke-dashoffset: -33px;
+}
+.burger.burger_active .burger__close {
+  transition: transform 400ms 50ms;
+}
+
+.burger_active .burger__close {
+  transform: scale(1);
 }
 
 .header {
@@ -608,16 +676,21 @@ section {
   background: #000;
   z-index: 99;
 }
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #fff;
-  padding: 25px 0;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 10px 0;
 }
 
 .logo {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .nav__list {
@@ -626,7 +699,23 @@ section {
   gap: 20px;
 }
 .nav__link {
-  color: #fff;
+  color: #FFFFFF;
+}
+.nav__network {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: #FFFFFF;
+  font-family: "Rajdhani", sans-serif;
+  align-items: center;
+}
+
+.network__icon {
+  max-width: 20px;
+}
+.network__link {
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 .main-screen__wrapper {
@@ -638,15 +727,43 @@ section {
   padding: 20px;
 }
 .main-screen__inner {
-  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 45%;
 }
 .main-screen__title {
-  color: #fff;
-  margin-bottom: 40px;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .main-screen__descr {
   font-family: "Rajdhani", sans-serif;
+}
+.main-screen__bg {
+  -o-object-position: 75%;
+     object-position: 75%;
+  width: 50%;
+  right: 0;
+  left: initial;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tags__tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #383838;
+  color: #FFFFFF;
+  opacity: 0.7;
+  font-family: "Rajdhani", sans-serif;
+}
+.tags__tag:hover {
+  background: #F2E84B;
+  color: #383838 !important;
+  opacity: 1;
 }
 
 .ticker__list {
@@ -655,13 +772,13 @@ section {
   padding: 20px 0;
 }
 .ticker__item {
-  color: #fff;
+  color: #FFFFFF;
 }
 .works__title {
   display: block;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #FFFFFF;
 }
 .works__inner {
   display: grid;
@@ -673,7 +790,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #FFFFFF;
   padding-bottom: 20px;
 }
 .work__info {
@@ -688,7 +805,7 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .work__link:hover::after {
   transform: translate(3px, -3px);
@@ -703,4 +820,32 @@ section {
 }
 .work:nth-child(2n) .work__cover {
   order: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .nav__list {
+    display: none;
+  }
+  .nav__network {
+    display: flex;
+  }
+  .main-screen__wrapper {
+    gap: 30px;
+  }
+  .main-screen__inner {
+    max-width: 100%;
+  }
+  .main-screen__bg {
+    position: static;
+    width: 100%;
+  }
+  .work {
+    grid-template-columns: 1fr;
+  }
+  .work:nth-child(2n) .work__cover {
+    order: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

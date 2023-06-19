@@ -16,32 +16,108 @@ html
 body
     font-family: StretchPro
     background: #000
-    color: #fff
+    color: $color-primary
 
 section
     margin-bottom: 60px
+
+// BURGEG
+.burger
+    display: none
+    position: relative
+    cursor: pointer
+    width: 80px
+    height: 80px
+    filter: url(#gooeyness)
+    svg
+        position: absolute
+        width: 80px
+        height: 80px
+    &__line
+        fill: none
+        stroke: #fff
+        stroke-width: 6px
+        stroke-linecap: round
+        stroke-linejoin: round
+        transform-origin: 50%
+        stroke-width: 5.5px
+        // transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms
+        transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms
+        &_1
+            stroke-dasharray: 40 40
+        &_2
+            stroke-dasharray: 21 39
+        &_3
+            stroke-dasharray: 21 39
+        &_4
+            stroke-dasharray: 40 40
+    &__close
+        transition: transform 400ms 50ms
+        transform: scale(0)
+        transition: transform 400ms
+
+.burger.burger_active
+    .burger__line
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms
+    .burger__line_1
+        stroke-dasharray: 1 40
+        stroke-dashoffset: -33px
+
+    .burger__line_2
+        stroke-dasharray: 5 39
+        stroke-dashoffset: -37px
+
+    .burger__line_3
+        stroke-dasharray: 5 39
+        stroke-dashoffset: -37px
+
+    .burger__line_4
+        stroke-dasharray: 1 40
+        stroke-dashoffset: -33px
+    .burger__close
+        transition: transform 400ms 50ms
+.burger_active
+    .burger__close
+        transform: scale(1)
 // HEADER
 .header
     position: sticky
     top: 0
     background: #000
     z-index: 99
+    &__nav
+        display: flex
+        align-items: center
+        gap: 20px
     &__wrapper
         display: flex
         justify-content: space-between
         align-items: center
-        border-bottom: 1px solid #fff
-        padding: 25px 0
+        border-bottom: 1px solid $color-primary
+        padding: 10px 0
+
 .logo
-    color: #fff
+    color: $color-primary
 .nav
     &__list
         display: flex
         justify-content: space-between
         gap: 20px
     &__link
-        color: #fff
-
+        color: $color-primary
+    &__network
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 10px
+        color: $color-primary
+        font-family: $font-secondary
+        align-items: center
+.network
+    &__icon
+        max-width: 20px
+    &__link
+        color: $color-primary
+        font-weight: bold
 .main-screen
     &__wrapper
         display: flex
@@ -51,13 +127,36 @@ section
         position: relative
         padding: 20px
     &__inner
-        max-width: 50%
+        display: flex
+        flex-direction: column
+        gap: 30px
+        max-width: 45%
     &__title
-        color: #fff
-        margin-bottom: 40px
+        color: $color-primary
         text-transform: uppercase
     &__descr
         font-family: $font-secondary
+    &__bg
+        object-position: 75%
+        width: 50%
+        right: 0
+        left: initial
+
+.tags
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    &__tag
+        padding: 5px 10px
+        border-radius: 20px
+        background: $color-secondary
+        color: $color-primary
+        opacity: 0.7
+        font-family: $font-secondary
+        &:hover
+            background: $color-accent
+            color: $color-secondary !important
+            opacity: 1
 
 .ticker
     &__list
@@ -65,7 +164,7 @@ section
         gap: 20px
         padding: 20px 0
     &__item
-        color: #fff
+        color: $color-primary
         &::after
             // content: url('../img/png/Hainz Studio/PNG/grv_26.png')
             // width: 10px
@@ -77,7 +176,7 @@ section
         display: block
         padding-bottom: 20px
         margin-bottom: 20px
-        border-bottom: 1px solid #fff
+        border-bottom: 1px solid $color-primary
     &__inner
         display: grid
         grid-template-columns: repeat(1, 1fr)
@@ -87,7 +186,7 @@ section
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: 10px
-    border-bottom: 1px solid #fff
+    border-bottom: 1px solid $color-primary
     padding-bottom: 20px
     &__info
         display: flex
@@ -99,7 +198,7 @@ section
         display: flex
         align-items: center
         gap: 10px
-        color: #fff
+        color: $color-primary
         &:hover
             &::after
                 transform: translate(3px, -3px)
@@ -112,3 +211,25 @@ section
             align-self: end
         .work__cover
             order: -1
+
+@media screen and (max-width: 768px)
+    .burger
+        display: block
+    .nav
+        &__list
+            display: none
+        &__network
+            display: flex
+    .main-screen
+        &__wrapper
+            gap: 30px
+        &__inner
+            max-width: 100%
+        &__bg
+            position: static
+            width: 100%
+    .work
+        grid-template-columns: 1fr
+        &:nth-child(2n)
+            .work__cover
+                order: 1

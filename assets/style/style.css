@@ -629,10 +629,10 @@ section {
   stroke-dasharray: 40 40;
 }
 .burger__line_2 {
-  stroke-dasharray: 21 39;
+  stroke-dasharray: 19 39;
 }
 .burger__line_3 {
-  stroke-dasharray: 21 39;
+  stroke-dasharray: 19 39;
 }
 .burger__line_4 {
   stroke-dasharray: 40 40;
@@ -652,7 +652,7 @@ section {
 }
 .burger.burger_active .burger__line_2 {
   stroke-dasharray: 5 39;
-  stroke-dashoffset: -37px;
+  stroke-dashoffset: -39px;
 }
 .burger.burger_active .burger__line_3 {
   stroke-dasharray: 5 39;

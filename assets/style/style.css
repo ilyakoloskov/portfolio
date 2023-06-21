@@ -609,6 +609,7 @@ section {
   width: 60px;
   height: 60px;
   filter: url(#gooeyness);
+  z-index: 99;
 }
 .burger svg {
   position: absolute;
@@ -687,6 +688,9 @@ section {
   align-items: center;
   border-bottom: 1px solid #FFFFFF;
   padding: 10px 0;
+}
+.header__mobile-menu {
+  display: none;
 }
 
 .logo {
@@ -827,7 +831,25 @@ section {
     display: block;
   }
   .nav__list {
-    display: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    z-index: 94;
+    background: #000;
+    left: 0;
+    top: 81px;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+  }
+  .nav__list_active {
+    transform: translateY(0);
+    z-index: -1;
+    padding: 30px;
+    min-height: 20vh;
+    transition: 0.3s;
+    box-sizing: content-box;
   }
   .nav__network {
     display: flex;

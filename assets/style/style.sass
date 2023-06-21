@@ -29,6 +29,7 @@ section
     width: 60px
     height: 60px
     filter: url(#gooeyness)
+    z-index: 99
     svg
         position: absolute
         width: 60px
@@ -100,7 +101,9 @@ section
         align-items: center
         border-bottom: 1px solid $color-primary
         padding: 10px 0
-
+    &__mobile
+        &-menu
+            display: none
 .logo
     color: $color-primary
 .nav
@@ -222,7 +225,24 @@ section
         display: block
     .nav
         &__list
-            display: none
+            transition: 0.3s
+            box-sizing: border-box
+            position: fixed
+            width: 100%
+            z-index: 94
+            background: #000
+            left: 0
+            top: 81px
+            flex-direction: column
+            height: 0
+            overflow: hidden
+            &_active
+                transform: translateY(0)
+                z-index: -1
+                padding: 30px
+                min-height: 20vh
+                transition: 0.3s
+                box-sizing: content-box
         &__network
             display: flex
     .main-screen

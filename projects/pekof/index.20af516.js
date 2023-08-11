@@ -11040,12 +11040,12 @@ const initDirectivesForSSR = () => {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[10].use[0]!./src/App.vue?vue&type=template&id=6c87d4c6
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[10].use[0]!./src/App.vue?vue&type=template&id=08f84ad5
 
 var _hoisted_1 = {
   "class": "main"
 };
-function Appvue_type_template_id_6c87d4c6_render(_ctx, _cache, $props, $setup, $data, $options) {
+function Appvue_type_template_id_08f84ad5_render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_app_header = resolveComponent("app-header");
   var _component_router_view = resolveComponent("router-view");
   var _component_app_footer = resolveComponent("app-footer");
@@ -11059,7 +11059,7 @@ function Appvue_type_template_id_6c87d4c6_render(_ctx, _cache, $props, $setup, $
     onRemoveFromFavorites: $options.removeFromFavorites
   }), null, 16 /* FULL_PROPS */, ["products", "favorites", "isFetching", "onAddToFavorites", "onRemoveFromFavorites"])], 1024 /* DYNAMIC_SLOTS */))]), runtime_core_esm_bundler_createVNode(_component_app_footer)], 64 /* STABLE_FRAGMENT */);
 }
-;// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=6c87d4c6
+;// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=08f84ad5
 
 ;// CONCATENATED MODULE: ./src/assets/images/logo.svg
 const logo_namespaceObject = __webpack_require__.p + "assets\\icons\\logo.cc36ecb5cac4efdf1203.svg";
@@ -14716,7 +14716,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     addToFavorites: function addToFavorites(product) {
-      this.favorites.push(product);
+      var isAdd = this.favorites.includes(product);
+      if (isAdd) {
+        alert('Товар уже добавлен в избранное');
+      } else {
+        this.favorites.push(product);
+      }
     },
     removeFromFavorites: function removeFromFavorites(product) {
       this.favorites = this.favorites.filter(function (item) {
@@ -14741,7 +14746,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 ;
-const App_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(Appvue_type_script_lang_js, [['render',Appvue_type_template_id_6c87d4c6_render]])
+const App_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(Appvue_type_script_lang_js, [['render',Appvue_type_template_id_08f84ad5_render]])
 
 /* harmony default export */ const App = (App_exports_);
 ;// CONCATENATED MODULE: ./node_modules/@vue/devtools-api/lib/esm/env.js

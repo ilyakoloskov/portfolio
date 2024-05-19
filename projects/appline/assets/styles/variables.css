@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #282828;
+  --color-secondary: #333131;
+  --color-accent: #fff;
+  --color-grey: rgba(0,0,0,0.4);
+
+  --font-h1: 64px;
+  --font-h2: 40px;
+  --font-l: 25px;
+  --font-m: 18px;
+  --font-sm: 16px;
+  --font-s: 14px;
+
+  --indent-section: 128px;
+  --indent-title: 40px;
+}

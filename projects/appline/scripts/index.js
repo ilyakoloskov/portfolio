@@ -23,3 +23,14 @@ const portoflioSlider = new Swiper(".works__slider", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+const tableTitles = document.querySelectorAll('.services__item-table-title')
+const servicesTbodies = document.querySelectorAll('.services__item-table-tbody')
+
+tableTitles.forEach((title, index) => {
+  title.addEventListener('click', () => {
+    title.classList.toggle('services__item-table-title_hide');
+    servicesTbodies[index].classList.toggle('services__item-table-tbody_hide');
+  });
+});

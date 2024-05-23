@@ -14,3 +14,31 @@
   --indent-section: 128px;
   --indent-title: 40px;
 }
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --font-h1: 48px;
+    --font-h2: 24px;
+    --font-l: 21px;
+    --font-m: 16px;
+    --font-sm: 14px;
+    --font-s: 12px;
+  
+    --indent-section: 68px;
+    --indent-title: 21px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --font-h1: 32px;
+    --font-h2: 21px;
+    --font-l: 18px;
+    --font-m: 16px;
+    --font-sm: 14px;
+    --font-s: 12px;
+  
+    --indent-section: 32px;
+    --indent-title: 21px;
+  }
+}

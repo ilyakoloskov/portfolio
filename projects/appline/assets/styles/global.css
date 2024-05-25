@@ -9,6 +9,11 @@ textarea {
   font-family: "Inter", sans-serif;
 }
 
+.body{}
+.body_hidden {
+  overflow: hidden;
+}
+
 .input,
 .textarea {
   background: none;
@@ -129,4 +134,8 @@ textarea {
   max-width: 320px;
   font-size: var(--font-m);
   font-weight: 500;
+}
+
+.sl-overlay {
+  background-color: var(--color-grey);
 }

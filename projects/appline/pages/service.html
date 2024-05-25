@@ -4,21 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.css" />
   <link rel="stylesheet" href="../assets/styles/style.css">
   <title>Document</title>
 </head>
-<body>
+<body class="body">
+
   <!-- HEADER -->
-  <header class="header">
+  <header class="header popup-show">
+    <!-- popup-show -->
     <div class="header__container container">
-      <a class="header__logo logo" href="#">APPLAINE</a>
-      <nav class="header__nav nav">
+      <a class="header__logo logo" href="#">APPLINE</a>
+      <nav id="headerNav" class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="../index.html" class="nav__link">Main</a>
+            <a href="./index.html" class="nav__link">Main</a>
           </li>
           <li class="nav__item nav_nested">
             <a href="./pages/services.html" class="nav__link">Services</a>
+            <ul class="nav__item-list">
+              <li class="nav__item-li">
+                <a class="nav__item-link" href="">Laundry center</a>
+              </li>
+              <li class="nav__item-li">
+                <a class="nav__item-link" href="">Laundry center</a>
+              </li>
+              <li class="nav__item-li">
+                <a class="nav__item-link" href="">Laundry center</a>
+              </li>
+              <li class="nav__item-li">
+                <a class="nav__item-link" href="">Laundry center</a>
+              </li>
+            </ul>
           </li>
           <li class="nav__item">
             <a href="./pages/about.html" class="nav__link">About</a>
@@ -28,8 +45,14 @@
           </li>
         </ul>
       </nav>
+      <div id="burger" class="header__burger burger">
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+      </div>
     </div>
   </header>
+
   <!-- MAIN -->
   <main class="main">
     <!-- PRODUCT -->
@@ -57,21 +80,21 @@
     <section class="works">
       <div class="works__container">
         <h2 class="works__title h2">Completed works</h2>
-        <div class="works__slider swiper">
+        <div class="works__slider swiper gallery">
           <div class="swiper-wrapper">
-            <a class="works__item swiper-slide" href="#">
+            <a class="works__item swiper-slide" href="../assets/images/Laundry Center 3.png" data-lg-size="1600-1066">
               <img class="wokrs__img" src="../assets/images/Laundry Center 3.png" alt="">
             </a>
-            <a class="works__item swiper-slide" href="#">
+            <a class="works__item swiper-slide" href="../assets/images/services-item.png">
+              <img class="wokrs__img" src="../assets/images/services-item.png" alt="">
+            </a>
+            <a class="works__item swiper-slide" href="../assets/images/Laundry Center 3.png">
               <img class="wokrs__img" src="../assets/images/Laundry Center 3.png" alt="">
             </a>
-            <a class="works__item swiper-slide" href="#">
+            <a class="works__item swiper-slide" href="../assets/images/Laundry Center 3.png">
               <img class="wokrs__img" src="../assets/images/Laundry Center 3.png" alt="">
             </a>
-            <a class="works__item swiper-slide" href="#">
-              <img class="wokrs__img" src="../assets/images/Laundry Center 3.png" alt="">
-            </a>
-            <a class="works__item swiper-slide" href="#">
+            <a class="works__item swiper-slide" href="../assets/images/Laundry Center 3.png">
               <img class="wokrs__img" src="../assets/images/Laundry Center 3.png" alt="">
             </a>
           </div>
@@ -275,9 +298,26 @@
         </div>
       </div>
     </div>
+
+    <div id="popup" class="popup">
+      <div class="popup__wrap">
+        <h2 class="popup__title h2">Send a request</h2>
+        <form class="popup__form form">
+          <input class="form__input input" type="text" placeholder="NAME">
+          <input class="form__input input" type="tel" placeholder="phone">
+          <textarea class="form__textarea textarea" placeholder="Your description" name="" id="" resize="none"></textarea>
+          <button class="form__button btn btn_light">Send</button>
+        </form>
+        <div id="popupClose" class="popup__close">
+          <div class="popup__close-item"></div>
+          <div class="popup__close-item"></div>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js"></script>
 <script src="../scripts/index.js"></script>
 </script>
 </html>

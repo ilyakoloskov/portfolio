@@ -13,34 +13,28 @@
   <header class="header">
     <!-- popup-show -->
     <div class="header__container container">
-      <a class="header__logo logo" href="#">APPLINE</a>
+      <a class="header__logo logo" href="/index.html"">APPLINE</a>
       <nav id="headerNav" class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="./index.html" class="nav__link">Main</a>
+            <a href="/index.html" class="nav__link">Main</a>
           </li>
           <li class="nav__item nav_nested">
-            <a href="./pages/services.html" class="nav__link">Services</a>
+            <a href="/pages/services.html" class="nav__link">Services</a>
             <ul class="nav__item-list">
               <li class="nav__item-li">
-                <a class="nav__item-link" href="">Laundry center</a>
+                <a class="nav__item-link" href="/pages/service.html">Laundry center</a>
               </li>
               <li class="nav__item-li">
-                <a class="nav__item-link" href="">Laundry center</a>
-              </li>
-              <li class="nav__item-li">
-                <a class="nav__item-link" href="">Laundry center</a>
-              </li>
-              <li class="nav__item-li">
-                <a class="nav__item-link" href="">Laundry center</a>
+                <a class="nav__item-link" href="/pages/service.html">Laundry center</a>
               </li>
             </ul>
           </li>
           <li class="nav__item">
-            <a href="./pages/about.html" class="nav__link">About</a>
+            <a href="/pages/about.html" class="nav__link">About</a>
           </li>
           <li class="nav__item">
-            <a href="./pages/contacts.html" class="nav__link">Contact</a>
+            <a href="/pages/contacts.html" class="nav__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -56,18 +50,18 @@
   <main class="main">
 
     <!-- MAIN-SCREEN -->
-    <section class="main-screen">
+    <section class="main-screen gsap">
       <div class="main-screen__container container">
         <h1 class="main-screen__title">Professional Household<br> Appliance Installation</h1>
         <div class="main-screen__btns">
-          <a class="main-screen__btn btn btn_transparent" href="#">Details</a>
+          <a class="main-screen__btn btn btn_transparent popup-show" href="#">Details</a>
           <a class="main-screen__btn btn btn_light" href="#">Order</a>
         </div>
       </div>
       <img class="main-screen__img" src="./assets/images/main-screen.png" alt="">
     </section>
     <!-- ADVANTAGES -->
-    <section class="advantages">
+    <section class="advantages gsap">
       <div class="advantages__container container">
         <h2 class="advantages__title h2">
           Expert Household Appliance Installation
@@ -107,7 +101,7 @@
       </div>
     </section>
     <!-- SERVICES -->
-    <section class="services">
+    <section class="services gsap">
       <div class="services__container container">
         <h2 class="services__title h2">
           Services
@@ -220,7 +214,7 @@
       </div>
     </section>
     <!-- FORM -->
-    <section class="section-form">
+    <section class="section-form gsap">
       <div class="section-form__container">
         <div class="section-form__wrap">
           <h2 class="section-form__title">Send a request</h2>
@@ -235,7 +229,7 @@
       </div>
     </section>
     <!-- SECTION-INFO -->
-    <section class="section-info">
+    <section class="section-info gsap">
       <div class="section-info__container container">
         <h2 class="section-info__title h2">
           Putting Your Comfort First: Thoughtful Appliance Installation Services
@@ -251,7 +245,7 @@
       </div>
     </section>
     <!-- TABLE -->
-    <section class="section-table">
+    <section class="section-table gsap">
       <div class="section-table__container container">
         <table class="table">
           <tbody class="table__tbody">
@@ -389,9 +383,16 @@
         </div>
       </div>
     </div>
+
+    <div id="preloader" class="preloader">
+      <div class="preloader__title">APPLINE</div>
+    </div>
   </footer>
-</body>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js"></script>
 <script src="./scripts/index.js"></script>
+</body>
 </html>

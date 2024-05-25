@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', ()=> {
+  setTimeout(()=> {
+    const preloader = document.querySelector('#preloader')
+    preloader.classList.add('preloader_hide')
+  }, 2500)
+
 
   // SLIDERS
   const createSliders = function () {
@@ -103,6 +108,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
   }
 
+  // preloader()
   createSliders()
   createGallery()
   toggleTable()

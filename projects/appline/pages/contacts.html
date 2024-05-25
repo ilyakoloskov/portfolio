@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.css" />
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <title>Document</title>
+</head>
+<body class="body">
+  <!-- HEADER -->
+  <header class="header">
+    <!-- popup-show -->
+    <div class="header__container container">
+      <a class="header__logo logo" href="/index.html"">APPLINE</a>
+      <nav id="headerNav" class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/index.html" class="nav__link">Main</a>
+          </li>
+          <li class="nav__item nav_nested">
+            <a href="/pages/services.html" class="nav__link">Services</a>
+            <ul class="nav__item-list">
+              <li class="nav__item-li">
+                <a class="nav__item-link" href="/pages/service.html">Laundry center</a>
+              </li>
+              <li class="nav__item-li">
+                <a class="nav__item-link" href="/pages/service.html">Laundry center</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="/pages/about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="/pages/contacts.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="burger" class="header__burger burger">
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <section class="contacts">
+      <div class="contacts__container">
+        <img src="../assets/images/contacts.jpg" class="contacts__image">
+        <div class="contacts__info">
+          <h1 class="contacts__title h1">Contacts</h1>
+          <p class="contacts__description">
+            We offer professional installation services for all your household appliances. Whether it's setting up a new refrigerator, dishwasher, washing machine, or any other appliance, our team of experienced technicians is dedicated to ensuring hassle-free and efficient installations. Contact us today to schedule an appointment and have your appliances installed with precision and care.
+          </p>
+          <div class="contacts__items">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+781017754894">
+                  +781017754894
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:testmail@gmail.com">
+                  testmail@gmail.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  Telegram
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__wrap">
+        <h2 class="section-form__title">Send a request</h2>
+        <form class="footer__form form">
+          <input class="form__input input" type="text" placeholder="NAME">
+          <input class="form__input input" type="tel" placeholder="phone">
+          <textarea class="form__textarea textarea" placeholder="Your description" name="" id="" resize="none"></textarea>
+          <button class="form__button btn btn_light">Send</button>
+        </form>
+      </div>
+
+      <div class="footer__lists">
+        <h2 class="footer__title">Contacts</h2>
+        <div class="footer__inner">
+          <div class="footer__list-inner">
+            <h4 class="footer__list-title">Navigation</h4>
+            <ul class="footer__list">
+              <li class="footer__li">
+                <a class="footer__link" href="#">Main</a>
+              </li>
+              <li class="footer__li">
+                <a class="footer__link" href="#">Services</a>
+              </li>
+              <li class="footer__li">
+                <a class="footer__link" href="#">About</a>
+              </li>
+              <li class="footer__li">
+                <a class="footer__link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list-inner">
+            <h4 class="footer__list-title">Address</h4>
+            <ul class="footer__list">
+              <li class="footer__li">
+                <a href="#" class="footer__link">
+                  Znamenka St., 11, Moscow
+                </a>
+              </li>
+              <li class="footer__li">
+                <a href="mailto:hello@hello.pro" class="footer__link">
+                  hello@hello.pro
+                </a>
+              </li>
+              <li class="footer__li">
+                <a href="tel:+ 79225551234" class="footer__link">
+                  + 7 922 555 1234
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list-inner network">
+            <h4 class="footer__list-title">Follow us</h4>
+            <ul class="footer__list">
+              <li class="footer__li">
+                <a href="#" class="footer__link">
+                  Telegram
+                </a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">
+                  Twitter
+                </a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">
+                  Pinterest
+                </a>
+              </li>
+            </ul>
+          </div>        
+        </div>
+      </div>
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup__wrap">
+        <h2 class="popup__title h2">Send a request</h2>
+        <form class="popup__form form">
+          <input class="form__input input" type="text" placeholder="NAME">
+          <input class="form__input input" type="tel" placeholder="phone">
+          <textarea class="form__textarea textarea" placeholder="Your description" name="" id="" resize="none"></textarea>
+          <button class="form__button btn btn_light">Send</button>
+        </form>
+        <div id="popupClose" class="popup__close">
+          <div class="popup__close-item"></div>
+          <div class="popup__close-item"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js"></script>
+<script src="../scripts/index.js"></script>
+</body>
+</html>

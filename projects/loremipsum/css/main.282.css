@@ -1,6 +1,6 @@
 /*!*******************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*******************************************************************************************************************************************************/
+!*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+\*******************************************************************************************************************************************************/
 shtml,
 body,
 div,
@@ -437,17 +437,17 @@ body {
 
 .select {
   position: relative;
-}
-.select__summary {
   cursor: pointer;
   border-radius: 5px;
   background-color: #ffffff;
   background-color: var(--color-primary);
-  list-style: none;
-  counter-reset: radios;
   cursor: pointer;
   border: 1px solid transparent;
   padding: 12px;
+}
+.select__summary {
+  list-style: none;
+  counter-reset: radios;
 }
 .select__summary::-webkit-details-marker {
   display: none;
@@ -478,7 +478,7 @@ body {
 .select__summary-radio {
   counter-increment: radios;
   -webkit-appearance: none;
-     -moz-appearance: none;
+      -moz-appearance: none;
           appearance: none;
   display: none;
   width: 100%;
@@ -535,9 +535,6 @@ body {
   color: var(--color-accent);
 }
 .select[open] {
-  z-index: 1;
-}
-.select[open] .select__summary {
   background-color: rgba(61, 64, 80, 0.85);
   color: #ffffff;
   color: var(--color-primary);
@@ -545,6 +542,7 @@ body {
   border-bottom-right-radius: 0;
   border-color: #3d4050;
   border-color: var(--color-bg-footer);
+  z-index: 1;
 }
 .select[open] .select__summary::before {
   content: "";

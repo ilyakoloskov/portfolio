@@ -447,6 +447,7 @@ body {
   counter-reset: radios;
   cursor: pointer;
   border: 1px solid transparent;
+  padding: 12px;
 }
 .select__summary::-webkit-details-marker {
   display: none;
@@ -480,7 +481,6 @@ body {
      -moz-appearance: none;
           appearance: none;
   display: none;
-  padding: 12px;
   width: 100%;
 }
 .select__summary-radio:checked {

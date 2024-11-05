@@ -1165,7 +1165,7 @@ body {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 40px;
+    width: 30px;
     height: 30px;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
@@ -1175,6 +1175,7 @@ body {
     border: none;
     cursor: pointer;
     z-index: 2;
+    padding: 0;
   }
   .header__burger-line {
     width: 100%;
